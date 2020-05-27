@@ -1,0 +1,27 @@
+.container {
+  [class*="MuiTableContainer-root"] {
+    width: 840px;
+  }
+  display: flex;
+  justify-content: center;
+  .photo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.parent {
+  display: flex;
+  align-items: center;
+}
+.parent > div {
+  flex: 1;
+  margin-left: 10px;
+  width: 100px;
+}
