@@ -4,7 +4,9 @@ import { IAppState } from "store";
 import { setUserInfo } from "store/users/actions";
 import { IUser } from "store/users/models";
 import { ReadonlyNullable } from "utilis/typingsGenerics";
+import { AnyAction } from "utilis/actionGenerics";
 import RegisterUser from "components/features/RegisterUser";
+
 
 type AppState = ReadonlyNullable<IAppState>;
 
@@ -12,7 +14,7 @@ function mapStateToProps({ user }: AppState) {
   return { user };
 }
 
-function mapDispatchToProps(dispatch: ThunkDispatch<any, any, any>) {
+function mapDispatchToProps(dispatch: ThunkDispatch<any, any, AnyAction>) {
   return {
     onSetUserInfo: (data: IUser) => dispatch(setUserInfo(data)),
   };
